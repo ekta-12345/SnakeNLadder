@@ -24,9 +24,15 @@ namespace SnakeAndLadderAssignment
                     Console.WriteLine("You got Ladder \n Player position = " + Player); // Print player value random genrate
                     break;
                 case Snakle:
-                    Player = Die;
-                    Console.WriteLine("You gotSnake \n player position = " + Player); // Print player value random genrate
+                    Player -= Die;
+                    if (Player < START_POSITION) //Check Lessthan Start Position
+                    {
+                        Player = START_POSITION; // Player value = Start Value
+                    }
+                    Console.WriteLine("You gotSnake \n player position = " + Player);
+
                     break;
+
             }
             Console.WriteLine(" Player Die Roll Position :- " + Die);                   //Print Random value
             Console.WriteLine(" Single Player Start_Position:- " + START_POSITION);     //Print Start Position
